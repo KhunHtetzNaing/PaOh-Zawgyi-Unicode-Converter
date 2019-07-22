@@ -55,10 +55,6 @@ function uni2zg(output) {
             "to": "$1\u1034"
         },
         {
-            "from": "\u1014(?=[\u102d\u102e]?[\u1030\u103d\u103e\u102f\u1039])",
-            "to": "\u108f"
-        },
-        {
             "from": "\u1014\u103c",
             "to": "\u108f\u103c"
         },
@@ -326,16 +322,16 @@ function zg2uni(output) {
             "from": "\u109e",
             "to": "\u108f"
         },
+        {
+            "from": "\u1052",
+            "to": "\u108f"
+        },
         //Mai Ngar
         {
             "from": "\u109f",
             "to": "\uaa7b"
         }, 
-        //Mai Ngar
-        {
-            "from": "\u1052",
-            "to": "\uaa7b"
-        },
+        
         {
             "from": "([\u102D\u102E\u103D\u102F\u1037\u1095])\\1+",
             "to": "$1"
