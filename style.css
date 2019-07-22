@@ -28,10 +28,7 @@
 
 header{
 	text-align:center;
-}
-
-header h2{
-	margin-top: 20;
+	padding: 10px;
 }
 
 h3{
