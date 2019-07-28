@@ -319,7 +319,7 @@ var Rabbit = {
       }
   ]
   ;
-    output = input_paoh(output);
+    output = input_paoh_unicode(output);
     return output_paoh_zawgyi(replace_with_rule(rule,output));
   }
   
@@ -794,21 +794,27 @@ var Rabbit = {
           "to": "\u103d\u1036"
       }
   ];
-    output = input_paoh(output);
+    output = input_paoh_zawgyi(output);
     return output_paoh_unicode(replace_with_rule(rule,output));
   }
   
     //PaOh Zawgyi+Unicode
     //Mai Pat Ngar => zMaiPatNgarz
     //Mai Ngar => zMaiNgarz
-function input_paoh(output){
+function input_paoh_zawgyi(output){
     var rule = [
-        {"from": "\u108F","to": "zMaiPatNgarz"},
         {"from":"\u109E","to":"zMaiPatNgarz"},
         {"from":"\u1052","to":"zMaiPatNgarz"},
-        {"from":"\uAA7B","to":"zMaiNgarz"},
         {"from":"\u109F","to":"zMaiNgarz"},
         {"from":"\u1053","to":"zMaiNgarz"}
+      ];
+    return replace_with_rule(rule,output);
+}
+
+function input_paoh_unicode(output){
+    var rule = [
+        {"from": "\u108F","to": "zMaiPatNgarz"},
+        {"from":"\uAA7B","to":"zMaiNgarz"}
       ];
     return replace_with_rule(rule,output);
 }
